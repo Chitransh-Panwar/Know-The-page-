@@ -40,6 +40,7 @@ sendbutton.addEventListener("click", () => {
         question: questext,
         session_id: currentSessionId
       }
+      console.log(payload)
 
       fetch("http://localhost:8000/ask", {
         method: "POST",
@@ -48,15 +49,19 @@ sendbutton.addEventListener("click", () => {
       })
       .then(response => {
         if (!response.ok) throw new Error("Backend error: " + response.status)
+        
         return response.json()
       })
+      
       .then(data => {
+        console.log(".")
         thinkingMsg.remove()
         addMessage(data.answer, "assistant")
         if (data.session_id) currentSessionId = data.session_id
         sendbutton.disabled = false
       })
       .catch(error => {
+        
         thinkingMsg.remove()
         addMessage("Error: could not reach backend.", "assistant")
         console.error(error)
