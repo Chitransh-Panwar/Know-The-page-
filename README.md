@@ -15,7 +15,7 @@
 ## ✨ Features
 
 - 🎬 **YouTube RAG** — fetches video transcript, builds a vector index, and answers questions with full chat memory
-- 🌍 **Webpage Q&A** — scrapes any webpage using Playwright (with BeautifulSoup fallback) and answers questions about its content
+- 🌍 **Webpage Q&A with RAG** — scrapes any webpage using Playwright (with BeautifulSoup fallback) and answers questions about its content
 - 💬 **Chat history** — remembers context across multiple questions in the same session
 - 🔄 **New session** — reset conversation with one click
 - 🌐 **Multilingual** — supports transcripts in English, Hindi, Spanish, French, German, Portuguese, Arabic, Russian, Japanese, Korean, Chinese, Italian and more
@@ -175,8 +175,6 @@ Contributions are welcome! Here are some areas where help would be amazing:
 
 | Area | Description |
 |---|---|
-| **Scraper improvements** | Better handling of JS-heavy or bot-protected sites. Consider Playwright stealth mode or alternative scraping strategies |
-| **RAG for webpages** | Currently uses text truncation for webpages — a full RAG pipeline for long articles/docs would improve accuracy |
 | **Deployment** | A clean Docker setup or one-click deploy to Railway/Render with Playwright support |
 | **More languages** | Add more transcript language codes to the multilingual support list |
 | **Extension UI** | Improve the side panel design, add markdown rendering for responses |
